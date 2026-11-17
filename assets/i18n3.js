@@ -15,5 +15,11 @@ Object.assign(window.I18N, {
   play_l: ["Relancer les animations", "تشغيل الحركة من جديد", "Play the animations"],
   filter_l: ["Filtrer la carte", "تصفية القائمة", "Filter the menu"],
   info_l: ["Horaires et accès", "أوقات العمل والموقع", "Opening hours and directions"],
+  cap_patio: ["Le patio", "الفناء", "The courtyard"],
+  g2: ["Le patio", "الفناء", "The courtyard"],
+  sp3_t: ["Le goûter", "شاي العصر", "Afternoon tea"],
+  sp3_s: ["Thé à la menthe et petits gâteaux.", "شاي بالنعناع وحلويات صغيرة.", "Mint tea and little cakes."],
+  sp3_w: ["Tous les jours de 16 h à 19 h", "كل يوم من 16:00 إلى 19:00", "Every day, 4 to 7 pm"],
+  credits_p: ["Photos d'illustration issues d'Unsplash (licence Unsplash) et de Wikimedia Commons (licences libres). Elles ne représentent pas ce commerce fictif.", "صور توضيحية من Unsplash (ترخيص Unsplash) ومن ويكيميديا كومنز (تراخيص حرة). لا تمثل هذا المحل الوهمي.", "Illustration photos from Unsplash (Unsplash License) and Wikimedia Commons (free licences). They do not show this fictional business."],
   rail_p: ["Chaque jour, un rendez-vous différent.", "كل يوم، موعد مختلف.", "Every day, something to look forward to."]
 });

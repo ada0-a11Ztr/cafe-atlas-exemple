@@ -9,58 +9,12 @@
   "kb": 941
  },
  {
-  "id": "tea",
-  "title": "Mint Tea at Moroccan Soup Bar.jpg",
-  "author": "Alpha",
-  "license": "CC BY-SA 2.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Mint_Tea_at_Moroccan_Soup_Bar.jpg",
-  "kb": 429
- },
- {
-  "id": "espresso",
-  "title": "Espresso Coffee 01.jpg",
-  "author": "Jubair1985",
-  "license": "CC0",
-  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:Espresso_Coffee_01.jpg",
-  "kb": 525
- },
- {
-  "id": "croissant",
-  "title": "Croissant with jam and butter - Little Miss Piggies.jpg",
-  "author": "Andy Li",
-  "license": "CC0",
-  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:Croissant_with_jam_and_butter_-_Little_Miss_Piggies.jpg",
-  "kb": 658
- },
- {
-  "id": "cafe",
-  "title": "Café Hafa, Tangier.jpg",
-  "author": "Ideophagous",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Caf%C3%A9_Hafa,_Tangier.jpg",
-  "kb": 718
- },
- {
-  "id": "breakfast2",
-  "title": "Moroccan breakfast.jpg",
-  "author": "Wimmiden",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Moroccan_breakfast.jpg",
-  "kb": 713
- },
- {
-  "id": "juice",
-  "title": "Glass of orange juice with ice.jpeg",
-  "author": "Grandmaster Huon",
-  "license": "CC0",
-  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:Glass_of_orange_juice_with_ice.jpeg",
-  "kb": 448
+  "id": "patio",
+  "title": "Courtyard cafe with lush greenery and seating areas",
+  "author": "Monaz Hastam",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/1Jf4mbk5v-o"
  },
  {
   "id": "tea2",
@@ -72,39 +26,99 @@
   "kb": 1100
  },
  {
-  "id": "msemen",
-  "title": "M'ssemen khlia - A Moroccan snack - a bit like a savoury pancake but thicker ... (6935110470).jpg",
-  "author": "Richard Allaway",
-  "license": "CC BY 2.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-  "page": "https://commons.wikimedia.org/wiki/File:M%27ssemen_khlia_-_A_Moroccan_snack_-_a_bit_like_a_savoury_pancake_but_thicker_..._(6935110470).jpg",
-  "kb": 354
+  "id": "tea",
+  "title": "Two decorative glass cups stacked on a matching saucer",
+  "author": "Mohamed M",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/3tmpxVoeoNU"
  },
  {
-  "id": "cups",
-  "title": "Close-up of espresso machine with two brown coffee cups.jpg",
-  "author": "Chevanon Photography",
-  "license": "CC0",
-  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-  "page": "https://commons.wikimedia.org/wiki/File:Close-up_of_espresso_machine_with_two_brown_coffee_cups.jpg",
-  "kb": 305
+  "id": "breakfast2",
+  "title": "A table with food on it",
+  "author": "sour moha",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/4Tgjeh1fWCc"
+ },
+ {
+  "id": "espresso",
+  "title": "A cup of coffee sitting on top of a white plate",
+  "author": "Katt Galvan",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/3v0vppDjvMI"
+ },
+ {
+  "id": "croissant",
+  "title": "Croissants and donuts with green pistachio toppings",
+  "author": "Tadeusz Zachwieja",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/lWC5lFvflJw"
  },
  {
   "id": "sun",
-  "title": "Freshly brewed cup of espresso in sunlight on kitchen counter.jpg",
-  "author": "Daniel Case",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Freshly_brewed_cup_of_espresso_in_sunlight_on_kitchen_counter.jpg",
-  "kb": 270
+  "title": "White ceramic cup with brown liquid",
+  "author": "Nathan Dumlao",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/dAYJfrtVjh0"
+ },
+ {
+  "id": "juice",
+  "title": "Orange juice in clear drinking glass",
+  "author": "Mateusz Feliksik",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/TmOGarNOGFs"
  },
  {
   "id": "breakfast3",
-  "title": "Moroccan Breakfast.jpg",
-  "author": "Khammal92",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "page": "https://commons.wikimedia.org/wiki/File:Moroccan_Breakfast.jpg",
-  "kb": 743
+  "title": "A table topped with plates of food next to a cup of orange juice",
+  "author": "Bao Menglong",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/MUJm7QnTEdo"
+ },
+ {
+  "id": "gouter",
+  "title": "White ceramic teapot with brown cookies on white ceramic tray",
+  "author": "kaouther djouada",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/oh2ptOSEbVM"
+ },
+ {
+  "id": "msemen",
+  "title": "Various decorative traditional pastries and sweets arranged in a tray",
+  "author": "Hicham Rachidi",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/zNwEeU0AOaM"
+ },
+ {
+  "id": "cups",
+  "title": "A modern cafe counter with pastries and coffee machine",
+  "author": "Monaz Hastam",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/FY5R1vaNQY4"
+ },
+ {
+  "id": "cafe",
+  "title": "Gray concrete fountain",
+  "author": "Meor Mohamad",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/uDCERD76pDY"
+ },
+ {
+  "id": "theiere",
+  "title": "Pastries on bowl beside teapot",
+  "author": "Rachid Oucharia",
+  "license": "Licence Unsplash",
+  "licenseUrl": "https://unsplash.com/license",
+  "page": "https://unsplash.com/photos/VBW7PlDhzWU"
  }
 ]
