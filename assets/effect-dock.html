@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dock magnétique</title>
+<style>
+html,body{margin:0;height:100%;background:#14181c;overflow:hidden}
+#stage{position:absolute;left:0;top:0;width:960px;height:300px;transform-origin:0 0;font-family:Georgia,"Times New Roman",serif}
+.dockbar{position:absolute;border-radius:26px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+.ic{position:absolute;border-radius:14px;display:grid;place-items:center;color:#14181c;font:600 15px system-ui,Segoe UI,Arial,sans-serif;letter-spacing:.02em;will-change:transform}
+.lab{position:absolute;transform:translateX(-50%);color:#f4efe8;font:600 15px system-ui,Segoe UI,Arial,sans-serif;white-space:nowrap;padding:5px 12px;border-radius:999px;background:rgba(184,137,91,.22);border:1px solid rgba(211,168,119,.5)}
+svg.curve{position:absolute;left:0;top:0;width:960px;height:300px;pointer-events:none}
+#cur{position:absolute;width:22px;height:22px;pointer-events:none}
+</style></head>
+<body>
+<div id="stage">
+  <svg class="curve" viewBox="0 0 960 300"><path id="curve" fill="none" stroke="#d3a877" stroke-width="1.5" stroke-dasharray="5 6" opacity=".7"/></svg>
+  <div class="dockbar" id="bar"></div>
+  <div id="icons"></div>
+  <div class="lab" id="lab"></div>
+  <svg id="cur" viewBox="0 0 22 22"><path d="M3 2l15 7-6.500 2L9 18z" fill="#f4efe8" stroke="#14181c" stroke-width="1.5" stroke-linejoin="round"/></svg>
+</div>
+<script>
+(function () {
+  var LANG = (function () { try { return parent.document.documentElement.lang; } catch (e) { return 'fr'; } })();
+  var LV = ({ fr: { s: 'Liv.', l: 'Livraison' }, ar: { s: 'توصيل', l: 'التوصيل' }, en: { s: 'Del.', l: 'Delivery' } })[LANG] || { s: 'Liv.', l: 'Livraison' };
+  var ITEMS = [['IG', 'Instagram', '#e7d3b8'], ['FB', 'Facebook', '#d8c4a6'], ['TT', 'TikTok', '#cbb492'], ['Maps', 'Google Maps', '#d3a877'], ['WA', 'WhatsApp', '#c79a66'], [LV.s, LV.l, '#bd8b58'], ['Web', 'Site web', '#e9dcc8']];
+  var BASE = 56, GAP = 14, W = 960, CX = 480, BOTTOM = 252, N = ITEMS.length;
+  var stage = document.getElementById('stage'), iconsEl = document.getElementById('icons'), bar = document.getElementById('bar'), lab = document.getElementById('lab'), cur = document.getElementById('cur'), curve = document.getElementById('curve');
+  var nodes = ITEMS.map(function (it) { var d = document.createElement('div'); d.className = 'ic'; d.textContent = it[0]; d.style.background = it[2]; iconsEl.appendChild(d); return d; });
+
+  function ease(x) { return 1 - Math.pow(1 - x, 3); }
+  function inout(x) { return x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; }
+  function lerp(a, b, p) { return a + (b - a) * p; }
+
+  /* Une seule horloge : tout est calculé à partir du temps t (secondes), boucle de 8 s */
+  function seek(t) {
+    t = ((t % 8) + 8) % 8;
+    var cx, a;
+    if (t < 2.2) { var p = ease(t / 2.2); cx = lerp(1020, CX, p); a = p; }
+    else if (t < 6.6) { var u = (t - 2.2) / 4.4; cx = CX + 190 * Math.sin(2 * Math.PI * u); a = 1; }
+    else { var q = inout((t - 6.6) / 1.4); cx = lerp(CX, 1020, q); a = 1 - q; }
+
+    var sizes = [], i, tot0 = N * BASE + GAP * (N - 1), s0 = CX - tot0 / 2;
+    for (i = 0; i < N; i++) { var c0 = s0 + i * (BASE + GAP) + BASE / 2, d = (c0 - cx) / 120; sizes.push(BASE * (1 + 0.95 * a * Math.exp(-d * d))); }
+    var total = sizes.reduce(function (s, v) { return s + v; }, 0) + GAP * (N - 1), x = CX - total / 2, big = 0, maxS = 0, centers = [];
+    for (i = 0; i < N; i++) {
+      var s = sizes[i], nd = nodes[i];
+      nd.style.width = s + 'px'; nd.style.height = s + 'px'; nd.style.left = x + 'px'; nd.style.top = (BOTTOM - s) + 'px'; nd.style.fontSize = (13 + 5 * (s - BASE) / BASE) + 'px';
+      centers.push(x + s / 2); if (s > maxS) { maxS = s; big = i; } x += s + GAP;
+    }
+    var bh = BASE + 36;
+    bar.style.left = (CX - total / 2 - 18) + 'px'; bar.style.width = (total + 36) + 'px'; bar.style.height = bh + 'px'; bar.style.top = (BOTTOM + 18 - bh) + 'px';
+    lab.textContent = ITEMS[big][1]; lab.style.left = centers[big] + 'px'; lab.style.top = (BOTTOM - maxS - 44) + 'px'; lab.style.opacity = String(a * a);
+    cur.style.left = (cx - 4) + 'px'; cur.style.top = (BOTTOM - 14) + 'px';
+    var pts = [], base = BOTTOM - BASE - 44;
+    for (var px = 0; px <= W; px += 12) { var dd = (px - cx) / 120; pts.push((px === 0 ? 'M' : 'L') + px + ' ' + (base - 46 * a * Math.exp(-dd * dd)).toFixed(1)); }
+    curve.setAttribute('d', pts.join(' '));
+  }
+  window.seek = seek;
+
+  function fit() { var k = window.innerWidth / W; stage.style.transform = 'scale(' + k + ')'; }
+  window.addEventListener('resize', fit); fit();
+
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var render = /[?&]render/.test(location.search);
+  if (reduce) { seek(4.4); }
+  else if (!render) { var t0 = performance.now(); (function loop() { seek((performance.now() - t0) / 1000); requestAnimationFrame(loop); })(); }
+  else { seek(0); }
+})();
+</script></body></html>
